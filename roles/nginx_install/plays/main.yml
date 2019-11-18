@@ -1,0 +1,26 @@
+---
+- name: Install NGINX
+  hosts: {{ linux_server }}
+  gather_facts: no
+
+  vars:
+    linux_server: 192.168.150.81
+
+  tasks:
+    - name: install the latest version of nginx
+      yum:
+        name: nginx
+        state: latest
+
+    - name: Make sure a nginx service is running
+      systemd:
+        state: started
+        name: nginx
+
+    - name: Copy using inline content
+      copy:
+        content: "{{ nginx_test_message }}"
+        dest: /usr/share/nginx/index.html
+    
+    
+ 

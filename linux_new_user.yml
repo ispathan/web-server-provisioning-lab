@@ -1,0 +1,21 @@
+---
+- name:  CREATE NEW LINUX USER
+  hosts: "{{ linux_server }}"
+  gather_facts: yes
+
+  vars:
+     linux_server: all
+
+  tasks: 
+    - name: ADD NEW USER
+      user:
+        name: "{{ linux_new_user }}"
+        shell: /bin/bash
+        password: $6$KTO608XLlMZFafA$fJAQTl1tD5eltEdmcwUypiDmLkyGyOSkgqI0WxaKIOqwQML/dKaDI2IIt3vUf6vB4jl1VtBE3c.QJaXtJdrb0/
+        groups: 
+          - developers
+          - wheel
+        append: yes
+    
+
+    

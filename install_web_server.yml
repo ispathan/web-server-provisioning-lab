@@ -1,0 +1,22 @@
+---
+- name: INSTALL WEB SERVER
+  hosts: '{{ tower_hosts }}'
+
+
+  tasks:
+    - include_role: 
+         name: iis_install
+      when: server_os == 'windows'
+
+    - include_roles:
+         name: nginx_install
+      when: server_os == 'redhat'
+
+
+      
+    
+
+    
+
+  
+    
