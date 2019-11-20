@@ -3,7 +3,7 @@
   hosts: '{{ tower_hosts_server }}'
 
   vars:
-     tower_host_server: all
+     tower_hosts_server: all
 
 
   tasks:

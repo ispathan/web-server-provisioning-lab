@@ -1,16 +1,16 @@
 ---
 - name: Linux OS Hardening
-  hosts: '{{ tower_host_server }}'
+  hosts: '{{ tower_hosts_server }}'
   gather_facts: true
 
 
   vars:
-     tower_host_server: all
+     tower_hosts_server: all
 
   tasks:
     - include_role:
          name: dev-sec.os-hardening
-      when: server_os == 'Linux'
+      when: server_os == 'RedHat'
     
     
     
