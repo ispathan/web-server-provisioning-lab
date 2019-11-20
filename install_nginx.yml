@@ -2,6 +2,9 @@
 - name: INSTALL WEB SERVER
   hosts: '{{ tower_hosts_server }}'
 
+  vars:
+     tower_host_server: all
+
 
   tasks:
     - include_roles:
