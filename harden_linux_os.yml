@@ -4,9 +4,6 @@
   gather_facts: true
 
 
-  vars:
-     tower_hosts_server: all
-
   tasks:
     - include_role:
          name: dev-sec.os-hardening
