@@ -1,0 +1,20 @@
+---
+- name: INSTALL WEB SERVER
+  hosts: '{{ tower_hosts_server }}'
+
+
+  tasks:
+    - include_roles:
+         name: nginx_install
+      when: server_os == 'RedHat'
+
+   
+
+
+      
+    
+
+    
+
+  
+    

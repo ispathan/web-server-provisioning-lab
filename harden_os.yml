@@ -1,0 +1,19 @@
+---
+
+
+- name: OS Hardening
+  hosts: '{{ tower_host_server }}'
+  gather_facts: true
+
+  tasks:
+    - include_roles:
+        name: dev-sec.os-hardening
+      when: server_os == 'Linux'
+    
+    
+    
+    
+    
+    
+    
+    
