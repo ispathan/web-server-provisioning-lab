@@ -23,7 +23,7 @@
     delegate_to: localhost
     register: is_windows
 
-  - deubg:
+  - debug:
        msg: '{{is_windows}}'
        
 
