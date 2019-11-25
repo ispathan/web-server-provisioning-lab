@@ -1,6 +1,6 @@
 ---
 - name: CONFIGURE CISCO SWITCH PORT
-  hosts: '{{ tower_inventory }}'
+  hosts: '{{ tower_inventory_cisco }}'
   connection: network_cli
   gather_facts: no
 
@@ -41,3 +41,4 @@
           state: merged
        when: not port_enabled
 
+nan

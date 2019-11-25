@@ -25,9 +25,11 @@
 
   - set_fact: 
         server_os: windows
+        cacheable: true
     when: is_windows is succeeded
 
   - set_fact: 
         server_os: linux
+        cacheable: true
     when: is_linux is succeeded
 
