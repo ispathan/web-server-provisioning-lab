@@ -1,6 +1,6 @@
 ---
 - name:  CREATE NEW LINUX USER
-  hosts: "{{ linux_server }}"
+  hosts: "{{ tower_inventory }}"
   gather_facts: yes
 
   vars:
@@ -16,6 +16,7 @@
           - developers
           - wheel
         append: yes
+      when:  server_os == 'Linux'
     
 
     

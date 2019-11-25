@@ -1,0 +1,14 @@
+---
+- name: Add Windows User
+  hosts: '{{ tower_inventory }}'
+  gather_facts: False
+
+  tasks:
+    - include_role:
+        name: add_single_win_user
+      when: server_os == 'Windows'
+    
+
+
+
+

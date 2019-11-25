@@ -1,6 +1,6 @@
 ---
-- name: INSTALL WEB SERVER
-  hosts: '{{ tower_hosts_server }}'
+- name: INSTALL NGINX WEB SERVER
+  hosts: '{{ tower_inventory }}'
 
   vars:
      tower_hosts_server: all

@@ -1,6 +1,6 @@
 ---
 - name: Linux OS Hardening
-  hosts: '{{ tower_hosts_server }}'
+  hosts: '{{ tower_inventory }}'
   gather_facts: true
 
 

@@ -1,6 +1,6 @@
 ---
 - name: OS Hardening
-  hosts: '{{ tower_host_server }}'
+  hosts: '{{ tower_inventory }}'
   gather_facts: true
 
   

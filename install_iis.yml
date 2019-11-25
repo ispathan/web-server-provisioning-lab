@@ -1,6 +1,6 @@
 ---
-- name: INSTALL WEB SERVER
-  hosts: '{{ tower_hosts }}'
+- name: INSTALL IIS WEB SERVER
+  hosts: '{{ tower_inventory }}'
 
 
   tasks:
