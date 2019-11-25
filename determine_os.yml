@@ -23,17 +23,11 @@
     delegate_to: localhost
     register: is_windows
 
-  - debug:
-       msg: '{{is_linux}}'
-
-  - debug:
-       msg: '{{is_windows}}'
-       
-
   - set_fact: 
         server_os: windows
-    when: is_windows.failed == "false"
+    when: is_windows is succeeded
 
   - set_fact: 
         server_os: linux
-    when: is_linux.failed == "false"
+    when: is_linux is succeeded
+
