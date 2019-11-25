@@ -25,8 +25,8 @@
 
   - set_fact: 
         server_os: windows
-    when: is_windows.results.state = "started"
+    when: is_windows.results.state == "started"
 
   - set_fact: 
         server_os: linux
-    when: is_linux.results.state = "started"
+    when: is_linux.results.state == "started"
