@@ -41,4 +41,3 @@
           state: merged
        when: not port_enabled
 
-nan
