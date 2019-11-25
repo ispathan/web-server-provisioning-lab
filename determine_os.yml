@@ -24,6 +24,9 @@
     register: is_windows
 
   - debug:
+       msg: '{{is_linux}}'
+
+  - debug:
        msg: '{{is_windows}}'
        
 
