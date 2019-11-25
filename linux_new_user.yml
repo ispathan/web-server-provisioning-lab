@@ -16,7 +16,7 @@
           - developers
           - wheel
         append: yes
-      when:  server_os == 'Linux'
+      when:  server_os == 'linux'
     
 
     

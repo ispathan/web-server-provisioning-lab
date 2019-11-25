@@ -1,0 +1,32 @@
+---
+- name: DETERMINE SERVVER OS
+  hosts: '{{ tower_inventory }}'
+  gather_facts: false
+
+
+  tasks:
+  # Check if TCP/22 is open 
+  - wait_for:
+      host: "{{inventory_hostname}}"
+      port: 22
+      timeout: 10
+    ignore_errors: true
+    delegate_to: localhost
+    register: is_linux
+
+  # Check if TCP/5985 is open
+  - wait_for:
+      host: "{{inventory_hostname}}"
+      port: 5985
+      timeout: 10
+    ignore_errors: true
+    delegate_to: localhost
+    register: is_windows
+
+  - set_fact: 
+        server_os: windows
+    when: is_windows.state == "started"
+
+  - set_fact: 
+        server_os: linux
+    when: is_linux.state == "started"
