@@ -23,6 +23,10 @@
     delegate_to: localhost
     register: is_windows
 
+  - deubg:
+       msg: '{{is_windows}}'
+       
+
   - set_fact: 
         server_os: windows
     when: is_windows.results.state == "started"
