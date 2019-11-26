@@ -10,7 +10,7 @@
   tasks:
     - include_role:
          name: nginx_install
-      when: server_os == 'RedHat'
+      when: server_os == 'linux'
 
    
 
