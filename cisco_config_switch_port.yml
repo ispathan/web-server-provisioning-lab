@@ -26,7 +26,7 @@
            ios_config:
              lines:
                - NO SHUTDOWN
-           parents: interface  "{{ interface_name }}"
+             parents: interface  "{{ interface_name }}"
 
        when: port_enabled
 
