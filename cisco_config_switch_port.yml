@@ -27,7 +27,7 @@
            ios_config:
              lines:
                - NO SHUTDOWN
-               - description "Enabled and Configured by Ansbile"
+               - description Enabled and Configured by Ansbile
              parents: interface {{ interface_name }}
 
        when: port_enabled
@@ -37,7 +37,7 @@
        ios_config:
          lines:
            - SHUTDOWN
-           - discription "Disabled by Ansible"
+           - discription Disabled by Ansible
          parents: interface {{ interface_name }}
        when: not port_enabled
 
