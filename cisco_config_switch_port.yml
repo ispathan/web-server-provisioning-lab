@@ -20,7 +20,7 @@
                - name: "{{ interface_name }}"
                  access:
                      vlan: "{{ access_vlan | int }}"
-             state: replace
+             state: replaced
 
          - name: ENABLE L2 PORT
            ios_l2_interfaces:
