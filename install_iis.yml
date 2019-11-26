@@ -1,6 +1,7 @@
 ---
 - name: INSTALL IIS WEB SERVER
   hosts: '{{ tower_inventory }}'
+  gather_facts: false
 
 
   tasks:

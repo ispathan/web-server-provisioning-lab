@@ -1,7 +1,7 @@
 ---
 - name: Set Windows Security Policies
   hosts: '{{ tower_inventory }}'
-  gather_facts: False
+  gather_facts: false
   
 
   roles:

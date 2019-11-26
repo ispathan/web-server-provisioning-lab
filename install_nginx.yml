@@ -1,6 +1,7 @@
 ---
 - name: INSTALL NGINX WEB SERVER
   hosts: '{{ tower_inventory }}'
+  gather_facts: false
 
   vars:
      tower_hosts_server: all
