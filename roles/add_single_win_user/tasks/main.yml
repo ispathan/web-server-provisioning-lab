@@ -1,11 +1,4 @@
 ---
-- name: Create Windows Domain Group if it does not exists
-  win_domain_group:
-    name: "{{ item }}"
-    scope: "{{ win_group_scope }}"
-    state: present
-  loop: "{{ win_user_groups }}"
-
 - name: Create AD User
   win_domain_user:
     name: "{{ win_user_name }}"
@@ -16,21 +9,7 @@
     state: present
     email: "{{ win_user_email }}"
 
-- name: Send Email with Report
-  mail:
-    host: smtp.gmail.com
-    port: 587
-    username: "{{ gmail_account }}"
-    password: "{{ gmail_account_password }}"
-    to: "{{ sendto_email }}"
-    subject: 'New Employee Account Creation for {{ win_user_firstname }} {{ win_user_surname }}'
-    body: | 
-             Your new employee, {{ win_user_firstname }} can login for this first time with the follow account info.
-             They will be prompted to change thier password.
-             username: {{ win_user_name }}
-             password: {{ win_user_password }}
-             email address: {{ win_user_email }}
-  delegate_to: localhost
+
   
 
   

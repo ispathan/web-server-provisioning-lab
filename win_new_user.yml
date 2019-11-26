@@ -4,6 +4,13 @@
   gather_facts: False
 
   tasks:
+
+    - set_fact:
+        win_user_name: "{{ server_username }}"
+        win_user_firstame: "{{ user_firstname }}"
+        win_user_surname: "{{ user_surname }}"
+        
+        
     - include_role:
         name: add_single_win_user
       when: server_os == 'windows'

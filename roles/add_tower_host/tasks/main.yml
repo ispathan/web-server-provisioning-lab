@@ -2,11 +2,16 @@
 # tasks file for add_tower_host
 - name: Add tower host role
   tower_host:
-    name: '{{ vm_ip_address }}'
-    inventory: "VMWare Guest VMs"
+    name: 'tower_inventory'
+    inventory: "server_os"
     state: present
     tower_username: '{{ tower_username }}'
     tower_password: '{{ tower_password }}'
     validate_certs: no
+    variables:
+       ansible_connection: winrm
+  when: server_os == 'windows'
 
+  
+       
    
