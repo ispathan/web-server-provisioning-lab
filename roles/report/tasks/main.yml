@@ -1,0 +1,18 @@
+---
+- name: Send Email with Report
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: "{{ gmail_account }}"
+    password: "{{ gmail_account_password }}"
+    to: "{{ sendto_email }}"
+    subject: 'New Server Enabled {{ tower_inventory }}'
+    body: | 
+             A new server was enabled.
+             
+             Server IP Address: {{ tower_inventory }}
+             Switch IP:  {{ tower_inventory_cisco}}
+             VLAN:  {{ access_vlan }}
+             Admin username: {{ server_username }}
+             
+             

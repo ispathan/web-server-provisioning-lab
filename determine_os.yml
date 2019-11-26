@@ -3,7 +3,7 @@
   hosts: '{{ tower_inventory }}'
   gather_facts: false
 
-
+  
   tasks:
   # Check if TCP/22 is open 
   - wait_for:
