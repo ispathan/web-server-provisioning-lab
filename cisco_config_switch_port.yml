@@ -37,7 +37,7 @@
        ios_config:
          lines:
            - SHUTDOWN
-           - discription Disabled by Ansible
+           - description Disabled by Ansible
          parents: interface {{ interface_name }}
        when: not port_enabled
 
