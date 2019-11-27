@@ -9,7 +9,7 @@
         win_user_name: "{{ server_username }}"
         win_user_firstame: "{{ user_firstname }}"
         win_user_surname: "{{ user_surname }}"
-        win_user_password: "{{ user_pasword }}"
+        win_user_password: "{{ user_password }}"
         
         
     - include_role:
