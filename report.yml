@@ -3,7 +3,7 @@
   hosts: '{{ tower_inventory }}'
   gather_facts: false
 
-  role: 
+  roles: 
     - report
     
   
