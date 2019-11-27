@@ -1,14 +1,13 @@
 ---
 - name: Create AD User
   win_domain_user:
-    name: "{{ win_user_name }}"
-    firstname: "{{ win_user_firstname }}"
-    surname: "{{ win_user_surname }}"
-    password: "{{ win_user_password }}"
-   # groups: "{{win_user_groups }}"
+    name: "{{ user_name }}"
+    firstname: "{{ user_firstname }}"
+    surname: "{{ user_surname }}"
+    password: "{{ user_password }}"
     state: present
-   # email: "{{ win_user_email }}"
-
+  # email: "{{ win_user_email }}"
+  # groups: "{{win_user_groups }}"    
 
   
 
