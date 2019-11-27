@@ -1,6 +1,6 @@
 ---
 - name: GENERATE AND SEND REPORT
-  hosts: localhost
+  hosts: '{{ tower_inventory }}'
   gather_facts: false
 
 
