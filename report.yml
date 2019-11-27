@@ -7,7 +7,7 @@
   tasks:
     - include_role:
          name: report
-      when: run_report == 'true'
+   #   when: run_report == 'true'
 
     
   
