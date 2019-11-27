@@ -8,6 +8,6 @@
     to: "{{ sendto_email }}"
     subject: New Server Enabled {{ tower_inventory }}
     body: "{{ lookup('template', 'templates/mail_body.j2') }}"
-    delegate_to: localhost
+  delegate_to: localhost
              
              

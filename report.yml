@@ -3,11 +3,7 @@
   hosts: '{{ tower_inventory }}'
   gather_facts: false
 
-
-  tasks:
-    - include_role:
-         name: report
-   #   when: run_report == 'true'
-
+  role: 
+    - report
     
   
