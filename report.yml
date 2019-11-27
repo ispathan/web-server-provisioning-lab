@@ -1,6 +1,6 @@
 ---
 - name: GENERATE AND SEND REPORT
-  hosts: localhosts
+  hosts: localhost
   gather_facts: false
 
 
