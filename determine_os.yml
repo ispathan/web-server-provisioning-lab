@@ -1,9 +1,12 @@
 ---
-- name: DETERMINE SERVVER OS
+- name: DETERMINE SERVER OS
   hosts: '{{ tower_inventory }}'
   gather_facts: false
 
-  
+  vars:
+    run_report: false
+
+
   tasks:
   # Check if TCP/22 is open 
   - wait_for:

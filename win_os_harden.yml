@@ -4,11 +4,13 @@
   gather_facts: false
   
 
-  roles:
- 
-
-
+  
   tasks:
+
+    - set_fact:
+        run_report: true
+      when: server_os == 'windows'
+      
     - include_role:
         name: '{{ item }}'
       with_items:

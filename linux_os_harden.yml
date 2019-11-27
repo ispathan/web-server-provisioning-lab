@@ -3,8 +3,16 @@
   hosts: '{{ tower_inventory }}'
   gather_facts: false
 
+  vars:
+    
 
   tasks:
+    
+
+    - set_fact:
+        run_report: true
+      when: server_os == 'linux'
+
     - include_role:
          name: dev-sec.os-hardening
       when: server_os == 'linux'
