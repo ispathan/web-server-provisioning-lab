@@ -10,6 +10,7 @@
         win_user_firstame: "{{ user_firstname }}"
         win_user_surname: "{{ user_surname }}"
         win_user_password: "{{ user_password }}"
+      when: server_os == 'windows'
         
         
     - include_role:
