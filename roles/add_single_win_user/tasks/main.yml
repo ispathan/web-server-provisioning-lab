@@ -1,7 +1,7 @@
 ---
 - name: Create AD User
   win_domain_user:
-    name: "{{ user_name }}"
+    name: "{{ server_username }}"
     firstname: "{{ user_firstname }}"
     surname: "{{ user_surname }}"
     password: "{{ user_password }}"
