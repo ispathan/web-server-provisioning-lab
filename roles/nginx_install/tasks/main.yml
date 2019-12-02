@@ -5,15 +5,21 @@
     name: nginx
     state: latest
 
-- name: Make sure a nginx service is running
-  systemd:
-    state: started
-    name: nginx
 
 - name: Copy using inline content
   copy:
     content: "{{ nginx_test_message }}"
     dest: /usr/share/nginx/index.html
 
+- name: Make sure a nginx service is running
+  systemd:
+    state: started
+    name: nginx
+
+- name: ENABLE HTTP ON FIREWALL
+  firewalld:  
+    service: http
+    permannent: yes
+    state: enabled
     
  
