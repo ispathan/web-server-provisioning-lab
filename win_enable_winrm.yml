@@ -4,5 +4,7 @@
   gather_facts: false
 
   tasks:
-    win_psexec:
-      command: whoami.exe
+
+   - name: TEST WIN_PSEXEC
+     win_psexec:
+       command: whoami.exe
