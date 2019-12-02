@@ -1,0 +1,8 @@
+---
+- name: TESTING WIN_PSEXEC
+  hosts: '{{ tower_inventory }}'
+  gather_facts: false
+
+  tasks:
+    win_psexec:
+      command: whoami.exe
