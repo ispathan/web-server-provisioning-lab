@@ -19,7 +19,7 @@
 - name: ENABLE HTTP ON FIREWALL
   firewalld:  
     service: http
-    permannent: yes
+    permanent: yes
     state: enabled
     
  
