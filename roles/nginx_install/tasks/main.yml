@@ -1,6 +1,6 @@
 ---
 
-- name: install the latest version of nginx
+- name: MAKE SURE THE LATEST VERSION OF NGINX IS INSTALLED
   yum:
     name: nginx
     state: latest
@@ -11,7 +11,7 @@
     content: "{{ nginx_test_message }}"
     dest: /usr/share/nginx/index.html
 
-- name: Make sure a nginx service is running
+- name: MAKE SURE NGINX SERVICE IS RUNNING
   systemd:
     state: started
     name: nginx
@@ -23,4 +23,7 @@
     permanent: yes
     state: enabled
     
- 
+- name: RESTART FIREWALLD
+  systemd:
+    state: restarted
+    name: firewalld
