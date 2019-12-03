@@ -18,6 +18,7 @@
 
 - name: ENABLE HTTP ON FIREWALL
   firewalld:  
+    zone: public
     service: http
     permanent: yes
     state: enabled
