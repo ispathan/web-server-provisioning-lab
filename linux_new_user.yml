@@ -3,10 +3,7 @@
   hosts: "{{ tower_inventory }}"
   gather_facts: yes
 
-  vars:
-     linux_server: all
-     user_password: $6$06uVGQk8n69j/y$VtdkgJWlUU9HnOyNcf.qEWnZPFuI9VwS.t3IAyU7ZjOg.lYcr3HaqMVv9S.KjmQ5etg2AkC6PdD92XdfKAmEd/
-
+  
   tasks: 
     - name: ADD NEW USER {{server_username }}
       user:
