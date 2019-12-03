@@ -9,7 +9,7 @@
 - name: Copy using inline content
   copy:
     content: "{{ nginx_test_message }}"
-    dest: /usr/share/nginx/index.html
+    dest: /usr/share/nginx/html/index.html
 
 - name: MAKE SURE NGINX SERVICE IS RUNNING
   systemd:
