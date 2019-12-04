@@ -12,10 +12,10 @@
 
   tasks:
     
-     - name: CONFIGURE AND ENABLE L2 PORT
+     - name: CONFIGURE AND ENABLE PORT { interface_name }}
        block: 
        
-         - name: CONFIUGRE L2 PORT
+         - name: CONFIGURE L2 PORT
            ios_l2_interfaces:
              config: 
                 - name: "{{ interface_name }}"
@@ -23,11 +23,11 @@
                     vlan: 20
              state: replaced
 
-         - name: ENABLE L2 PORT
+         - name: ENABLE PORT {{ interface_name }}
            ios_config:
              lines:
                - NO SHUTDOWN
-               - description Enabled and Configured by Ansbile
+               - description Enabled and Configured by Ansible
              parents: interface {{ interface_name }}
 
        when: port_enabled

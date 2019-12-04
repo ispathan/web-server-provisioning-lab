@@ -6,11 +6,12 @@
   vars:
     run_report: false
 
+# Quick and dirty method to determine OS based on open ports.  22/ssh for Linux and 5985/winrm for Windows
 
   tasks:
   # Check if TCP/22 is open 
   - wait_for:
-      host: "{{inventory_hostname}}"
+      host: "{{ inventory_hostname }}"
       port: 22
       timeout: 30
     ignore_errors: true
